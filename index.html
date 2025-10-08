@@ -30,7 +30,7 @@
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#about-us">About Us</a></li>
                     <li id="contact"><a href="#contact">Contact</a></li>
-                    <li><a href="#" class="nav-button">Schedule Pickup</a></li>
+                    <li><a href="#" id="open-schedule" class="nav-button">Schedule Pickup</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +43,7 @@
                     aria-hidden="false"></div>
                 <div class="slide" style="background-image: url('images/VIVANTE_/hero2.jpg')" data-index="1"
                     aria-hidden="true"></div>
-                <div class="slide" style="background-image: url('images/VIVANTE_/IMG-20240819-WA0054.jpg')"
+                <div class="slide" style="background-image: url('images/VIVANTE_/IMG-20240819-WA0074.jpg')"
                     data-index="2" aria-hidden="true"></div>
             </div>
 
@@ -166,6 +166,45 @@
         </div>
     </section>
 
+    <!-- Schedule Modal -->
+    <div id="schedule-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="schedule-title"
+        aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel" role="document">
+            <button class="modal-close" aria-label="Close schedule form">×</button>
+            <h2 id="schedule-title">Schedule a Pickup</h2>
+            <form id="schedule-form" novalidate>
+                <label for="sched-name">Full name</label>
+                <input id="sched-name" name="name" type="text" required>
+
+                <label for="sched-phone">Phone</label>
+                <input id="sched-phone" name="phone" type="tel" required>
+
+                <label for="sched-email">Email (optional)</label>
+                <input id="sched-email" name="email" type="email">
+
+                <label for="sched-date">Pickup date</label>
+                <input id="sched-date" name="date" type="date" required>
+
+                <label for="sched-time">Pickup time</label>
+                <input id="sched-time" name="time" type="time" required>
+
+                <label for="sched-address">Pickup address</label>
+                <input id="sched-address" name="address" type="text" required>
+
+                <label for="sched-notes">Notes (optional)</label>
+                <textarea id="sched-notes" name="notes" rows="3"></textarea>
+
+                <div class="modal-actions">
+                    <button type="submit" class="cta-button">Request Pickup</button>
+                    <button type="button" class="modal-cancel">Cancel</button>
+                </div>
+            </form>
+            <div id="schedule-success" class="hidden" role="status">Thanks — we received your request. We will contact
+                you to confirm.</div>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-section contact-info">
@@ -174,7 +213,8 @@
                         class="fas fa-map-marker-alt"></i> 13 Timothy Lane, Rumuola, Port Harcourt, Rivers State</p>
                 <p><i class="fas fa-phone"></i> <a href="tel:+2348033396159">+234(0)8-033-396-159</a></p>
                 <p><i class="fas fa-envelope"></i> <a
-                        href="mailto:hello@vivantelaundry.com">hello@vivantelaundry.com</a></p>
+                        href="mailto:vivantelaundry_drycleaners@hotmail.com">vivantelaundry_drycleaners@hotmail.com</a>
+                </p>
             </div>
 
             <div class="footer-section quick-links">
@@ -203,6 +243,8 @@
 
     <script src="slider.js" defer></script>
     <script src="script.js"></script>
+    <script src="supabase-config.js"></script>
+    <script src="schedule.js" defer></script>
 </body>
 
 </html>
