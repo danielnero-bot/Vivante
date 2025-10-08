@@ -1,0 +1,679 @@
+/*
+ * Vivante Laundry & Dry Cleaners CSS
+ * A clean, modern, and vibrant style to match the premium service.
+ */
+
+/* --- 1. Global Reset & Variables --- */
+:root {
+  --primary-color: #007bff; /* Vibrant blue for trust and cleanliness */
+  --secondary-color: #28a745; /* Fresh green for eco-friendliness */
+  --text-dark: #333333;
+  --text-light: #6c757d;
+  --bg-light: #f8f9fa; /* Light gray background */
+  --white: #ffffff;
+  --font-family: "Montserrat", sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-dark);
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--text-dark);
+}
+
+/* --- Utility Buttons (CTA) --- */
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
+.secondary-cta {
+  background-color: var(--secondary-color);
+}
+
+.secondary-cta:hover {
+  background-color: #1e7e34;
+}
+
+/* --- 2. Header & Navigation --- */
+header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--bg-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-image {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+  height: 40px;
+  margin-right: 10px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul li {
+  margin-left: 20px;
+}
+
+.main-nav ul li a {
+  color: var(--text-dark);
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li .active {
+  color: var(--primary-color);
+}
+
+.nav-button {
+  background-color: var(--secondary-color);
+  color: var(--white) !important;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  transition: background-color var(--transition-speed);
+}
+
+.nav-button:hover {
+  background-color: #1e7e34;
+}
+
+.quick-contact {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.quick-contact i {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+/* --- 3. Hero Section --- */
+.hero-section {
+  height: 60vh;
+  min-height: 650px;
+  position: relative;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./images/VIVANTE_/IMG-20240819-WA0047.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  animation: heroAnimation 20s infinite;
+}
+@keyframes heroAnimation {
+  0% {
+    background-image: url("./images/VIVANTE_/IMG-20240819-WA0048.jpg");
+  }
+  50% {
+    background-image: url("./images/VIVANTE_/IMG-20240819-WA0054.jpg");
+  }
+  100% {
+  }
+}
+
+.hero-content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1,
+.hero-content h2 {
+  color: var(--white);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9);
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.2em;
+}
+
+.hero-content h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* --- Hero Slider Enhancements --- */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: var(--hero-height, 60vh);
+  min-height: 320px; /* lower min for small screens */
+  overflow: hidden;
+  display: block;
+}
+
+.hero-slider .slides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider .slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-slider .hero-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 2;
+}
+
+.hero-slider .hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-slider .control-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider #prev {
+  left: 20px;
+}
+.hero-slider #next {
+  right: 20px;
+}
+
+.hero-slider .control-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.slider-indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.indicator-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.indicator-btn.active {
+  background: var(--primary-color);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Ensure text scales on small screens */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content h2 {
+    font-size: 1em;
+  }
+  .hero-slider .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Helper utility classes to quickly change hero height without editing core CSS */
+.hero-slider--short {
+  --hero-height: 50vh;
+}
+.hero-slider--medium {
+  --hero-height: 60vh;
+}
+.hero-slider--tall {
+  --hero-height: 85vh;
+}
+
+/* --- 4. Services Overview Section --- */
+.services-overview {
+  padding: 60px 0;
+  background-color: var(--bg-light);
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  flex-basis: calc(25% - 20px);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  text-decoration: none;
+  color: var(--text-dark);
+  min-width: 200px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--primary-color);
+}
+
+.service-card i {
+  font-size: 3em;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.service-card h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 0.9em;
+}
+
+/* --- 5. How It Works Section --- */
+.how-it-works {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex-basis: calc(25% - 22.5px);
+  min-width: 180px;
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  margin: 0 auto 15px;
+  border: 5px solid var(--bg-light);
+  box-shadow: 0 0 0 5px var(--primary-color), 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.step h4 {
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+/* --- 6. Why Choose Us Section --- */
+.why-choose-us {
+  padding: 60px 0;
+  background-color: var(--bg-light);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex-basis: calc(25% - 20px);
+  text-align: center;
+  padding: 20px;
+  min-width: 200px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.feature-item:hover {
+  background-color: var(--white);
+}
+
+.feature-item i {
+  font-size: 2.5em;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.feature-item h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* --- 7. Testimonials Section --- */
+.testimonials {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  font-style: italic;
+  font-size: 1.1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.customer-name {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* --- 8. Footer CTA --- */
+.footer-cta {
+  background-color: var(--primary-color);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* --- 9. Footer --- */
+footer {
+  background-color: var(--text-dark);
+  color: var(--bg-light);
+  padding-top: 40px;
+  font-size: 0.9em;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
+  gap: 20px;
+}
+
+.footer-section {
+  flex-basis: calc(33% - 20px);
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  color: var(--white);
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.footer-section a {
+  color: var(--bg-light);
+}
+
+.footer-section a:hover {
+  color: var(--primary-color);
+}
+
+.quick-links ul {
+  list-style: none;
+}
+
+.quick-links ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: var(--white);
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color var(--transition-speed);
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: #2a2a2a;
+}
+
+/* --- 10. Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+  .main-nav {
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .main-nav ul {
+    justify-content: center;
+  }
+  .quick-contact {
+    order: 2;
+    margin-left: auto;
+  }
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .service-card,
+  .step,
+  .feature-item {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+  .steps {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo,
+  .quick-contact {
+    margin: 5px 0;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .main-nav ul li {
+    margin: 5px 0;
+  }
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content h2 {
+    font-size: 1.2em;
+  }
+  .service-card,
+  .step,
+  .feature-item {
+    flex-basis: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  .footer-section p {
+    justify-content: center;
+  }
+  .social-icons {
+    margin-top: 10px;
+  }
+}
+
+#contact {
+  margin-left: auto;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.hero-content, .hero-section{
+    height: 100%;
+    min-height: auto;
+    position: static;
+    display: block;
+}
