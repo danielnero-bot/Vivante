@@ -679,3 +679,10 @@ footer {
   position: static;
   display: block;
 }
+
+#location-btn {
+  cursor: pointer;
+}
+#location-btn:hover {
+  color: var(--primary-color);
+}
