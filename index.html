@@ -11,17 +11,17 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <img src="images/Logotext.png" alt="Vivante Laundry & Dry Cleaners Logo with leaping horse"
-                    class="logo-image">
-                <span>Vivante</span>
-            </div>
+            <div class="logo"><span>Vivante</span></div>
 
             <nav class="main-nav">
                 <ul>
@@ -31,10 +31,20 @@
                     <li><a href="#about-us">About Us</a></li>
                     <li id="contact"><a href="#contact">Contact</a></li>
                     <li><a href="#" id="open-schedule" class="nav-button">Schedule Pickup</a></li>
+                    <li id="menu-btn" onclick="showMenu()" ><i class="fa-solid fa-bars"></i></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="second-nav">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#services-overview">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li id="contact"><a href="#contact">Contact</a></li>
+            <li><a href="#" id="open-schedule" class="nav-button">Schedule Pickup</a></li>
+    </div>
 
     <section class="hero-section" id="home">
         <header class="hero-slider" id="hero-slider" aria-label="Hero image slider">
@@ -154,7 +164,7 @@
             <div class="testimonial-card">
                 <p>"Vivante is a game-changer! My clothes have never looked better, and the pickup service is
                     unbelievably convenient. Highly recommended!"</p>
-                <div class="customer-name">— Sarah M.</div>
+                <div class="customer-name">— Gabriel W.</div>
             </div>
         </div>
     </section>
@@ -240,6 +250,7 @@
             <p>&copy; 2025 Vivante Laundry & Dry Cleaners. All rights reserved.</p>
         </div>
     </footer>
+
 
     <script src="slider.js" defer></script>
     <script src="script.js"></script>
